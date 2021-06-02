@@ -245,5 +245,5 @@ if __name__ == "__main__":
                       )
 
     trainer.load_state_dict(torch.load(os.path.join(save_folder, "final.torch")))
-    torch.save(trainer.half().state_dict(), os.path.join(save_folder, "final.torch"))
+    torch.save(trainer.half().state_dict(), os.path.join(save_folder, "final-half.torch"))
     
