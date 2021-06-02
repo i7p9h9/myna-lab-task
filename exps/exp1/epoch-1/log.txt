@@ -1,0 +1,14 @@
+epoch 1; Processing 64000 / 640000; Loss 0.8432 Loss S 0.1549 Loss U 0.6883 - 106.24 Hz
+Validation SER: 0.0279
+epoch 1; Processing 128000 / 640000; Loss 0.8327 Loss S 0.1482 Loss U 0.6845 - 106.11 Hz
+Validation SER: 0.0235
+epoch 1; Processing 192000 / 640000; Loss 0.8246 Loss S 0.1442 Loss U 0.6804 - 106.98 Hz
+Validation SER: 0.0091
+epoch 1; Processing 256000 / 640000; Loss 0.8155 Loss S 0.1414 Loss U 0.6741 - 107.05 Hz
+Validation SER: 0.0058
+epoch 1; Processing 320000 / 640000; Loss 0.8052 Loss S 0.1399 Loss U 0.6654 - 106.04 Hz
+Validation SER: 0.0023
+epoch 1; Processing 384000 / 640000; Loss 0.7909 Loss S 0.1382 Loss U 0.6527 - 106.62 Hz
+Validation SER: 0.0290
+epoch 1; Processing 448000 / 640000; Loss 0.7774 Loss S 0.1368 Loss U 0.6405 - 106.56 Hz
+Validation SER: 0.0565

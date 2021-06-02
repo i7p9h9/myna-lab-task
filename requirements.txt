@@ -1,0 +1,9 @@
+tqdm
+numpy
+scipy
+torch
+torchaudio
+samplerate
+soundfile
+num2words
+
