@@ -71,5 +71,3 @@ if __name__ == "__main__":
     with open(os.path.join(save_file), 'w') as f:
         w = csv.writer(f, result.keys())
         w.writerows(result.items())
-
-    torch.save(trainer.half().state_dict(), "final-half.torch")
