@@ -7,7 +7,7 @@
 
 ## Start with docker
   - `git clone git@github.com:i7p9h9/myna-lab-task.git`
-  - cd speech2num/
+  - cd mina-lab-task/
   - prepare docker environment:
   ```bash
   ./local/prepare_for_docker.sh
