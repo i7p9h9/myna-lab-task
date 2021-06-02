@@ -2,6 +2,8 @@ import os
 import torch
 import numpy as np
 
+import torch.nn.functional as F
+
 from tools.models.ResNetSE34Q import MainModel
 from tools.losses.ctc import LossFunction
 
@@ -170,7 +172,6 @@ class Trainer(torch.nn.Module):
         
         message = "Validation SER: {:0.4f}".format(avg_cer)
         print(message)
-        self.logme(n_epoch, message=message)
 
         if avg_cer < self.min_cer:
             self.min_cer = avg_cer
