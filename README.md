@@ -50,7 +50,7 @@
   ```
   
 ## Validation results 
-> For supervised training process validation on 500 labeled files showed SER: **0.0565**
+> For supervised training process validation on 500 labeled files showed SER: **0.0241**
 
 > For fixmatch training process validation on 500 labeled files showed SER: **0.0023**
   
