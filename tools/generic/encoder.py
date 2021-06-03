@@ -86,9 +86,7 @@ class NumEncoder:
 
         t = list()
         for m, w in enumerate(words):
-            if m > 0:
-                t.append(18)  # space at start
-            # t.append(18)  # space at start
+            t.append(18)  # space at start
             if w in self.num2class:
                 t.append(self.num2class[w])
                 continue
@@ -109,7 +107,7 @@ class NumEncoder:
             elif any([w.endswith(x) for x in self.ending_old]):
                 t.append(self.num2class["old"])
         
-        # t.append(18)  # space at end
+        t.append(18)  # space at end
         return t
     
     def decode(self, sequence: typing.List[int]) -> int:

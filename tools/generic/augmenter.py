@@ -100,7 +100,7 @@ class Mixer(object):
             else:
                 TypeError("snr should be int or tuple, but received: {}".format(type(self.snr)))
 
-        original_sn_rmse_ratio = np.std(signal) / (np.std(noise) + 1e-7)
+        original_sn_rmse_ratio = np.std(signal[np.nonzero(signal)]) / (np.std(noise) + 1e-7)
         target_sn_rmse_ratio = self.db_2_mag(snr)
         # signal_scaling_factor = np.sqrt(target_sn_rmse_ratio / original_sn_rmse_ratio)
         signal_scaling_factor = target_sn_rmse_ratio / (original_sn_rmse_ratio + 1e-7)

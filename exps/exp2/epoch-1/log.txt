@@ -1,0 +1,4 @@
+epoch 1; Processing 64000 / 640000; Loss 0.6179 Loss S 0.1061 Loss U 0.5118 - 105.74 Hz
+epoch 1; Processing 128000 / 640000; Loss 0.6097 Loss S 0.1025 Loss U 0.5073 - 106.73 Hz
+epoch 1; Processing 192000 / 640000; Loss 0.6047 Loss S 0.1013 Loss U 0.5034 - 106.43 Hz
+epoch 1; Processing 256000 / 640000; Loss 0.6002 Loss S 0.1008 Loss U 0.4995 - 104.77 Hz

@@ -1,7 +1,7 @@
 ## Hardware requirements
   - GPU with 11Gb memory is necessary
-  - 64Gb RAM memory at least  # actually 32 should be enough but, unfortunately, there are memory leak exists, I still not find one
-  - 120Gb free space is required (ssd type partitions is recommended)
+  - 64Gb RAM memory at least
+  - 120Gb free space is required (ssd type partition is recommended)
 
 ***
 
@@ -16,19 +16,18 @@
 ***
 
 ## To run training process 
-  - manage `path.sh`
+  - edit `path.sh`
     - DATASETS_DIR - path to folder with trainig data, next structure expected:
     ```bash
     .
     ├── test-example
     ├── test-example.csv
-    ├── train
     ├── train.csv
-    └── train-orig
+    └── train
     ```
-    - PROCESSED_DIR - empty folder where will be save processed dataset and augmentation, ssd partition type highly recommended
-    - RESULT_DIR - folder wehere weights for neural network will be saved
-  - start training sctipt:
+    - PROCESSED_DIR - empty folder where processed dataset and augmentation will be saved, ssd partition type highly recommended
+    - RESULT_DIR - folder where weights for neural network will be saved
+  - start training script:
   ```bash
   ./train.sh -j X
   ```
@@ -44,13 +43,13 @@
   ./eval.sh -s csv_result_file -m path_to_model_file -d path_to_folder_with_wav
   ```
 
-  for insnance:
+  for instance:
   ```
   ./eval.sh -s result.csv -m exps/exp1/final-half.torch -d /media/ssd/myna-labs/numbers2/test-example/
   ```
-  
-## Validation results 
-> For supervised training process validation on 500 labeled files showed SER: **0.0241**
 
-> For fixmatch training process validation on 500 labeled files showed SER: **0.0023**
+---
+## Validation results 
+  1. For supervised training process validation on 500 labeled files showed SER: **0.0040**
+  2. For fixmatch (semi-supervised) training process validation on 500 labeled files showed SER: **0.0017**
   

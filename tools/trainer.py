@@ -55,7 +55,7 @@ class Trainer(torch.nn.Module):
             
         return logits
         
-    def logme(self, n_epoch, message=None):
+    def logme(self, n_epoch, message=None, is_save=False):
         if self.save_folder is None:
             return
         save_folder = os.path.join(self.save_folder, "epoch-{}".format(n_epoch))
@@ -65,7 +65,8 @@ class Trainer(torch.nn.Module):
             log_file = os.path.join(save_folder, "log.txt")
             with open(log_file, "a+") as f:
                 f.write(message + "\n")
-        torch.save(self.state_dict(), os.path.join(save_folder, "model-{:02d}.torch".format(n_epoch)))
+        if is_save:
+            torch.save(self.state_dict(), os.path.join(save_folder, "model-{:02d}.torch".format(n_epoch)))
     
     def epoch_step(self, 
                    n_epoch, 
@@ -122,10 +123,10 @@ class Trainer(torch.nn.Module):
             print(info_message, end='\r', flush=True)
             if np.mod(n_step + 1, self.epoch_steps // 10) == 0:
                 print()
-                self.logme(n_epoch, message=info_message)
+                self.logme(n_epoch, message=info_message, is_save=True)
             
             if np.mod(n_step + 1, self.validation_period) == 0:
-                self.validation(generator_valid)
+                self.validation(n_epoch, generator_valid)
         
         self.scheduler.step()
         self.logme(n_epoch, message=info_message)
@@ -157,7 +158,7 @@ class Trainer(torch.nn.Module):
         
         return l
     
-    def validation(self, generator):
+    def validation(self, n_epoch, generator):
         print("start validation ...")
         valid_cer = []
         for n in range(len(generator)):
@@ -170,7 +171,8 @@ class Trainer(torch.nn.Module):
         
         avg_cer = sum(valid_cer) / len(valid_cer)
         
-        message = "Validation SER: {:0.4f}".format(avg_cer)
+        message = "Validation CER: {:0.4f}".format(avg_cer)
+        self.logme(n_epoch, message)
         print(message)
 
         if avg_cer < self.min_cer:

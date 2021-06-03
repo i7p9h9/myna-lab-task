@@ -1,0 +1,25 @@
+epoch 0; Processing 64000 / 640000; Loss 1.1478 Loss S 1.1478 Loss U 0.0000 - 340.82 Hz
+Validation CER: 0.4480
+epoch 0; Processing 128000 / 640000; Loss 0.6402 Loss S 0.6402 Loss U 0.0000 - 339.87 Hz
+Validation CER: 0.1312
+epoch 0; Processing 192000 / 640000; Loss 0.4513 Loss S 0.4513 Loss U 0.0000 - 338.53 Hz
+Validation CER: 0.0984
+epoch 0; Processing 256000 / 640000; Loss 0.3515 Loss S 0.3515 Loss U 0.0000 - 336.25 Hz
+Validation CER: 0.0442
+epoch 0; Processing 320000 / 640000; Loss 0.2904 Loss S 0.2904 Loss U 0.0000 - 331.13 Hz
+Validation CER: 0.0228
+epoch 0; Processing 384000 / 640000; Loss 0.2481 Loss S 0.2481 Loss U 0.0000 - 338.21 Hz
+Validation CER: 0.0665
+epoch 0; Processing 448000 / 640000; Loss 0.2177 Loss S 0.2177 Loss U 0.0000 - 329.46 Hz
+Validation CER: 0.0201
+epoch 0; Processing 512000 / 640000; Loss 0.1944 Loss S 0.1944 Loss U 0.0000 - 338.52 Hz
+Validation CER: 0.0040
+epoch 0; Processing 576000 / 640000; Loss 0.1760 Loss S 0.1760 Loss U 0.0000 - 339.02 Hz
+Validation CER: 0.0145
+epoch 0; Processing 640000 / 640000; Loss 0.1616 Loss S 0.1616 Loss U 0.0000 - 336.69 Hz
+Validation CER: 0.0232
+epoch 0; Processing 640000 / 640000; Loss 0.1616 Loss S 0.1616 Loss U 0.0000 - 336.69 Hz
+Validation CER: 0.0017
+Validation CER: 0.0025
+Validation CER: 0.0046
+Validation CER: 0.0122
