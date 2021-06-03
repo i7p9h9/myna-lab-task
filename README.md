@@ -50,6 +50,6 @@
 
 ---
 ## Validation results 
-  1. For supervised training process validation on 500 labeled files showed SER: **0.0040**
-  2. For fixmatch (semi-supervised) training process validation on 500 labeled files showed SER: **0.0017**
+  1. For supervised training process validation on 500 labeled files showed CER: **0.0040**
+  2. For fixmatch (semi-supervised) training process validation on 500 labeled files showed CER: **0.0017**
   
